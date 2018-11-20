@@ -1,5 +1,5 @@
 # Random perons profile project
-game about whose clicks fastest to win
+
 
 
 <code>npm i</code></br>
