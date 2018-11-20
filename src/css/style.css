@@ -1,0 +1,182 @@
+.project {
+  height: 100vh;
+  background-color: white;
+  min-width: 320px; }
+
+.users {
+  padding: 50px;
+  border: 1px solid #38ff8b;
+  color: black;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/useres-background.jpg) no-repeat center center;
+  background-size: cover;
+  transition-duration: 3s; }
+
+.users:hover {
+  color: white;
+  transition-duration: 3s; }
+
+.animation:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: white;
+  height: 100%;
+  z-index: -1;
+  animation-name: close;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+.animation::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  height: 100%;
+  transition-duration: 1s;
+  z-index: -1;
+  animation-name: close;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+.animation:hover::before {
+  animation-name: open;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+.animation:hover::after {
+  animation-name: open;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+@keyframes open {
+  0% {
+    width: 50%;
+    opacity: 0.9;
+    color: white; }
+  100% {
+    width: 0;
+    opacity: 0;
+    color: black; } }
+
+@keyframes close {
+  0% {
+    width: 0;
+    opacity: 0;
+    color: white; }
+  100% {
+    width: 50%;
+    opacity: 0.9;
+    color: black; } }
+
+.personal-img img {
+  border-radius: 50%; }
+
+.personal-img img:hover {
+  border-radius: 50%; }
+
+.info-view {
+  text-transform: capitalize; }
+
+.info-view p {
+  padding-top: 20px;
+  animation-duration: 1s; }
+
+.info-view h2 {
+  animation-duration: 1s; }
+
+.icons {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation-delay: 1s; }
+
+.hidebutton .fas {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: -10px;
+  left: 0;
+  right: 0;
+  transition-duration: 1s;
+  opacity: 0.2; }
+
+.hidebutton .fas:hover {
+  top: 0px;
+  transition-duration: 1s;
+  opacity: 1; }
+
+.showbutton .fas {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0px;
+  left: 0;
+  right: 0;
+  display: none;
+  transition-duration: 1s;
+  opacity: 0.2; }
+
+.showbutton .fas:hover {
+  top: -10px;
+  transition-duration: 1s;
+  opacity: 1; }
+
+.hidebutton-2 .fas {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  transition-duration: 1s;
+  opacity: 0.2; }
+
+.hidebutton-2 .fas:hover {
+  bottom: 0px;
+  transition-duration: 1s;
+  opacity: 1; }
+
+.showbutton-2 .fas {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  display: none;
+  transition-duration: 1s;
+  opacity: 0.2; }
+
+.showbutton-2 .fas:hover {
+  bottom: -10px;
+  transition-duration: 1s;
+  opacity: 1; }
+
+.fas,
+.far {
+  padding: 20px;
+  font-size: 1.5em;
+  cursor: pointer; }
+
+.far:hover {
+  color: #38ff8b;
+  transition-duration: 1s; }
+
+.fas:hover {
+  color: #38ff8b;
+  transition-duration: 1s; }
+
+@media (max-width: 435px) {
+  .info-view h2 {
+    font-size: 1.2em; }
+  .icons {
+    font-size: 0.8em; } }
